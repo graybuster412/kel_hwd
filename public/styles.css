@@ -4596,7 +4596,7 @@ body.open .right-door {
         height: 822.63px;
         top: -42.8322px;
         left: 1.25977px;
-        background-image: url("https://graybuster412.github.io/kel_pics/kel4110.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel3752.jpg");
     }
 
     #IMAGE2 {
@@ -5284,7 +5284,7 @@ body.open .right-door {
     }
 
     #IMAGE59>.ladi-image>.ladi-image-background {
-        background-image: url("https://graybuster412.github.io/kel_pics/kel4099.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel4188.jpg");
     }
 
     #IMAGE60 {
@@ -5483,7 +5483,7 @@ body.open .right-door {
     }
 
     #HEADLINE47 {
-        width: 141px;
+        width: 145px;
         left: 0.5px;
     }
 
@@ -5942,6 +5942,10 @@ body.open .right-door {
     #IMAGE67 {
         top: 82px;
         left: 224.022px;
+        animation-name: tada;
+        animation-delay: 1s;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
     }
 
     #GROUP139 {
@@ -7916,7 +7920,7 @@ body.open .right-door {
 
     #HEADLINE48,
     #HEADLINE47 {
-        width: 143px;
+        width: 147px;
     }
 
     #HEADLINE48 {
@@ -8449,6 +8453,7 @@ body.open .right-door {
         top: 111.9px;
         left: 24.222px;
     }
+
     /* Video wedding 40 */
     #VIDEO40>.ladi-video>.ladi-video-background {
         background-image: url("https://w.ladicdn.com/s371x252/6833feb01c8070001239a3de/88c740763a61ca6873e5f3508d56b2c8-1-20250814065900-lstwd.jpg");
@@ -8670,7 +8675,7 @@ body.open .right-door {
 
     #IMAGE34>.ladi-image>.ladi-image-background,
     #IMAGE35>.ladi-image>.ladi-image-background {
-        background-image: url("https://graybuster412.github.io/kel_pics/kel4110.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel3752.jpg");
     }
 
     #IMAGE35,
