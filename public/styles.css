@@ -5382,8 +5382,8 @@ body.open .right-door {
     #IMAGE64 {
         width: 178.688px;
         height: 142.584px;
-        top: 820.767px;
-        left: 512.867px;
+        top: 800.767px;
+        left: 650.867px;
     }
 
     #IMAGE64>.ladi-image>.ladi-image-background {
@@ -6137,7 +6137,7 @@ body.open .right-door {
         height: 619px;
         top: -2px;
         left: -14px;
-        background-image: url("https://graybuster412.github.io/kel_pics/kel3898.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel4053.jpg");
     }
 
     #IMAGE31 {
@@ -6150,7 +6150,7 @@ body.open .right-door {
         height: 647.723px;
         top: -15px;
         left: -25px;
-        background-image: url("https://graybuster412.github.io/kel_pics/kel3752.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel4041.jpg");
     }
 
     #IMAGE32 {
@@ -6165,7 +6165,7 @@ body.open .right-door {
         height: 506.2px;
         top: -35px;
         left: -41px;
-        background-image: url("https://graybuster412.github.io/kel_pics/3795.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel4055.jpg");
     }
 
     #IMAGE33 {
@@ -6179,31 +6179,31 @@ body.open .right-door {
         width: 288.7px;
         height: 434.2px;
         left: -14px;
-        background-image: url("https://graybuster412.github.io/kel_pics/3964.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel4053.jpg");
     }
 
     #IMAGE34 {
-        width: 266.805px;
-        height: 207.87px;
+        width: 300.7px;
+        height: 434.2px;
         top: 803px;
         left: 346.597px;
     }
 
     #IMAGE34>.ladi-image>.ladi-image-background {
-        width: 328.369px;
-        height: 437.371px;
+        width: 300.7px;
+        height: 440.2px;
         top: -6px;
         left: -34.5638px;
     }
 
     #IMAGE34>.ladi-image>.ladi-image-background,
     #IMAGE35>.ladi-image>.ladi-image-background {
-        background-image: url("https://graybuster412.github.io/kel_pics/kel4110.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel4101.jpg");
     }
 
     #IMAGE35 {
-        width: 266.805px;
-        height: 202.828px;
+        /* width: 266.805px; */
+        /* height: 202.828px; */
         top: 1034.38px;
         left: 346.597px;
     }
@@ -6238,7 +6238,7 @@ body.open .right-door {
     }
 
     #IMAGE37>.ladi-image>.ladi-image-background {
-        background-image: url("https://graybuster412.github.io/kel_pics/kel4055.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel4178.jpg");
     }
 
     #IMAGE38 {
@@ -6310,7 +6310,7 @@ body.open .right-door {
     }
 
     #GALLERY5 .ladi-gallery .ladi-gallery-view-item[data-index="0"] {
-        background-image: url("https://graybuster412.github.io/kel_pics/kel3842.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel3976.jpg");
         object-fit: fill;
 
     }
@@ -8254,6 +8254,12 @@ body.open .right-door {
         font-size: 10px;
     }
 
+    #HEADLINE88>.ladi-headline,
+    #HEADLINE90>.ladi-headline {
+        font-size: 8px;
+        color: #000;
+    }
+
     #HEADLINE86 {
         top: 387.003px;
         left: 0.5002px;
@@ -8674,9 +8680,12 @@ body.open .right-door {
         left: 217.585px;
     }
 
-    #IMAGE34>.ladi-image>.ladi-image-background,
+    #IMAGE34>.ladi-image>.ladi-image-background {
+        background-image: url("https://graybuster412.github.io/kel_pics/kel3555.jpg");
+    }
+
     #IMAGE35>.ladi-image>.ladi-image-background {
-        background-image: url("https://graybuster412.github.io/kel_pics/kel3752.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel3680.jpg");
     }
 
     #IMAGE35,
@@ -8779,7 +8788,7 @@ body.open .right-door {
     }
 
     #GALLERY5 .ladi-gallery .ladi-gallery-view-item[data-index="0"] {
-        background-image: url("https://graybuster412.github.io/kel_pics/kel3842.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel3976.jpg");
     }
 
     #GALLERY5 .ladi-gallery .ladi-gallery-view-item[data-index="1"] {
@@ -9081,7 +9090,7 @@ body.open .right-door {
 
     #IMAGE75>.ladi-image>.ladi-image-background,
     #IMAGE77>.ladi-image>.ladi-image-background {
-        background-image: url("https://w.ladicdn.com/s500x550/6833feb01c8070001239a3de/thiet_ke_chua_co_ten-removebg-preview-20250816123312-yif3j.png");
+        background-image: url("https://graybuster412.github.io/kel_pics/qr_cua_tui.png");
     }
 
     #HEADLINE88,
