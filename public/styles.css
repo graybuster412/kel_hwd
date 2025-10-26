@@ -5325,13 +5325,14 @@ body.open .right-door {
     #HEADLINE50,
     #HEADLINE51 {
         width: 549px;
+        left: calc(100% / 4.7);
     }
 
     #HEADLINE50>.ladi-headline,
     #HEADLINE52>.ladi-headline,
     #HEADLINE45>.ladi-headline,
     #PARAGRAPH27>.ladi-paragraph {
-        font-size: 30px;
+        font-size: 35px;
     }
 
     #HEADLINE51,
@@ -7017,7 +7018,7 @@ body.open .right-door {
         height: 540.414px;
         top: -28.138px;
         left: 0.827586px;
-        background-image: url("https://graybuster412.github.io/kel_pics/kel4110.jpg");
+        background-image: url("https://graybuster412.github.io/kel_pics/kel3752.jpg");
     }
 
     #IMAGE2 {
@@ -7594,7 +7595,7 @@ body.open .right-door {
 
     #PARAGRAPH7 {
         width: 390px;
-        top: 678.058px;
+        top: 608.058px;
         left: 15px;
     }
 
@@ -7665,7 +7666,7 @@ body.open .right-door {
 
     #PARAGRAPH86 {
         width: 376px;
-        top: 717.728px;
+        top: 660.728px;
         left: 22px;
     }
 
@@ -7792,7 +7793,7 @@ body.open .right-door {
     #HEADLINE50>.ladi-headline,
     #HEADLINE52>.ladi-headline,
     #HEADLINE45>.ladi-headline {
-        font-size: 22px;
+        font-size: 24px;
     }
 
     #HEADLINE51,
