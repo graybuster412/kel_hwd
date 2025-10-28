@@ -11,6 +11,16 @@
   <meta name="keywords" content="Thiệp cưới, Kel x Tamara">
   <meta name="description" content="TRÂN TRỌNG KÍNH MỜI ♥️">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <meta id="viewport" name="viewport" content="width=960,user-scalable=no,initial-scale=1.0"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta property="og:title" content="Thiệp Mời Cưới">
+  <meta property="og:type" content="website">
+  <meta property="og:image:secure_url" content="https://graybuster412.github.io/kel_pics/wedding_theme.jpg">
+  <meta property="og:image:type" content="image/jpeg" />
+  <meta property="og:image:width" content="500" />
+  <meta property="og:image:height" content="400" />
+  <meta property="og:description" content="TRÂN TRỌNG KÍNH MỜI ♥️">
+  <meta name="format-detection" content="telephone=no">
 
   <script type='text/javascript'>
     window.ladi_viewport = function (b) {
@@ -56,13 +66,7 @@
     }
       ;
   </script>
-  <!-- <meta id="viewport" name="viewport" content="width=960,user-scalable=no,initial-scale=1.0"> -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta property="og:title" content="Thiệp Mời Cưới">
-  <meta property="og:type" content="website">
-  <meta property="og:image" content="https://graybuster412.github.io/kel_pics/wedding_theme.jpg">
-  <meta property="og:description" content="TRÂN TRỌNG KÍNH MỜI ♥️">
-  <meta name="format-detection" content="telephone=no">
+
 
   <link rel="icon" type="image/x-icon"
     href="https://static.ladipage.net/6833feb01c8070001239a3de/finalogo-20241104054341-wpwqp-removebg-preview-20241116060353-xv1qa-20250616131140-6t3fy.png">
@@ -4859,11 +4863,11 @@
     )();
   </script>
   <!-- OVERLAY LẤP LÁNH (TRONG SUỐT) -->
-  <div class="sparkle-overlay" aria-hidden="true">
+  <!-- <div class="sparkle-overlay" aria-hidden="true">
     <div class="spark"
       style="left: 96.5018%; top: -62.862%; --size: 5.397182110790324px; --fall: 25.20134626944125s; --sway: 3.303443223586675s; --blink: 1.1086338239504845s; --delay: 0.709625911338021s;">
     </div>
-    <!-- <div class="spark"
+     <div class="spark"
       style="left: 11.2112%; top: -117.909%; --size: 5.272852090817938px; --fall: 16.109972380466143s; --sway: 4.154424966876246s; --blink: 1.5878417599302148s; --delay: 1.0052160006959148s;">
     </div>
     <div class="spark"
@@ -4946,13 +4950,13 @@
     </div>
     <div class="spark"
       style="left: 67.5403%; top: -58.2819%; --size: 4.425429861476809px; --fall: 20.14878598131829s; --sway: 2.8360225531266767s; --blink: 1.2074120832883422s; --delay: 0.5705331211774007s;">
-    </div> -->
+    </div>
     <div class="spark"
       style="left: 15.4372%; top: -88.2359%; --size: 3.4678551088746543px; --fall: 14.470245451746386s; --sway: 3.7110779905867406s; --blink: 1.0879175019070177s; --delay: 0.32904762245278374s;">
     </div>
-  </div>
+  </div>  -->
 
-  <style>
+  <!-- <style>
     .sparkle-overlay {
       position: fixed;
       inset: 0;
@@ -5044,7 +5048,7 @@
           drop-shadow(0 0 3px rgba(255, 255, 255, 1)) drop-shadow(0 0 12px rgba(255, 223, 72, 1)) drop-shadow(0 0 26px rgba(255, 160, 0, .95));
       }
     }
-  </style>
+  </style> -->
 
   <script>
     (function () {
@@ -5103,14 +5107,16 @@
         try {
           const res = await fetch(url, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
+            headers: {
+              'Content-Type': 'application/json',
+            },
             body: JSON.stringify(data)
           });
           if (!res.ok) throw new Error(`Lỗi HTTP: ${res.status}`);
           return await res.json();
         } catch (err) {
           console.error('❌ Gửi thất bại:', err);
-          alert("Có lỗi xảy ra. Vui lòng thử lại sau.");
+          return null;
         }
       }
 
@@ -5158,7 +5164,7 @@
 
         const data = {
           fullname: name,
-          email: "",
+          email: name,
           status: attendingStatus(isAttending),
           guests: guestCount,
           place: party,
