@@ -11,7 +11,6 @@
   <meta name="keywords" content="Thiệp cưới, Kel x Tamara">
   <meta name="description" content="TRÂN TRỌNG KÍNH MỜI ♥️">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <meta id="viewport" name="viewport" content="width=960,user-scalable=no,initial-scale=1.0"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta property="og:title" content="Thiệp Mời Cưới">
   <meta property="og:type" content="website">
@@ -67,7 +66,6 @@
       ;
   </script>
 
-
   <link rel="icon" type="image/x-icon"
     href="https://static.ladipage.net/6833feb01c8070001239a3de/finalogo-20241104054341-wpwqp-removebg-preview-20241116060353-xv1qa-20250616131140-6t3fy.png">
   <link rel="shortcut icon"
@@ -95,6 +93,7 @@
   <link rel="stylesheet" href="./styles.css">
 
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ZDD2059S0"></script>
+  <script src="./scripts.js"></script>
 
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -109,19 +108,9 @@
 
   <div class="cloud-door right-door"></div>
   <div class="cloud-door left-door"></div>
-
-  <script>
-    window.addEventListener("load", function () {
-      setTimeout(() => {
-        document.body.classList.add("open");
-      }, 300);
-    });
-  </script>
-
 </head>
 
 <body class="lazyload">
-
   <audio id="background-music" autoplay loop>
     <source src="https://graybuster412.github.io/kel_pics/wedding_theme.mp3" type="audio/mpeg">
     Your browser does not support the audio element.
@@ -136,59 +125,8 @@
       alt="Pause Icon" style="display: none;">
   </div>
 
-  <script>
-    window.onload = function () {
-      // on first load
-      const audio = document.getElementById("background-music");
-      const toggleButton = document.getElementById("music-toggle");
-      const playIcon = document.getElementById("play-icon");
-      const pauseIcon = document.getElementById("pause-icon");
-
-      let isPlaying = false;
-      let hasStarted = false;
-
-      const playAudio = () => {
-        if (!hasStarted) {
-          audio.play().then(() => {
-            isPlaying = true;
-            hasStarted = true;
-            playIcon.style.display = "none";
-            pauseIcon.style.display = "block";
-            toggleButton.classList.add("vibrating");
-          }).catch((e) => {
-            console.log("Lỗi phát nhạc: ", e);
-          });
-        }
-      }
-
-      // Chạm lần đầu để phát nhạc
-      document.body.addEventListener("click", function () {
-        playAudio();
-      }, {
-        once: true
-      });
-
-      // Bấm nút để bật/tắt nhạc
-      toggleButton.addEventListener("click", function (event) {
-        event.stopPropagation(); // không lan sự kiện click
-
-        if (isPlaying) {
-          audio.pause();
-          isPlaying = false;
-          playIcon.style.display = "block";
-          pauseIcon.style.display = "none";
-          toggleButton.classList.remove("vibrating");
-        } else {
-          audio.play().then(() => {
-            isPlaying = true;
-            playIcon.style.display = "none";
-            pauseIcon.style.display = "block";
-            toggleButton.classList.add("vibrating");
-          });
-        }
-      });
-    };
-  </script>
+  <!-- Romantic Petal Rain -->
+  <div id="petal-field" aria-hidden="true"></div>
 
   <!-- Attribution (ẩn) -->
   <p style="display: none;">Icon by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a></p>
@@ -312,10 +250,13 @@
             <div id="BOX1" class="ladi-element ladi-animation">
               <div class="ladi-box ladi-transition"></div>
             </div>
-            <div id="IMAGE1" class="ladi-element ladi-animation">
-              <div class="ladi-image ladi-transition">
-                <div class="ladi-image-background"></div>
+            <div style="position: relative;" class="vignette">
+              <div id="IMAGE1" class="ladi-element ladi-animation ">
+                <div class="ladi-image ladi-transition">
+                  <div class="ladi-image-background"></div>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
@@ -331,10 +272,10 @@
               <div class="ladi-box ladi-transition"></div>
             </div>
             <div id="HEADLINE4" class="ladi-element">
-              <h2 class="ladi-headline ladi-transition">30<br></h2>
+              <h2 class="ladi-headline  ladi-transition">30<br></h2>
             </div>
             <div id="HEADLINE5" class="ladi-element">
-              <h2 class="ladi-headline ladi-transition">11<br></h2>
+              <h2 class="ladi-headline  ladi-transition">11<br></h2>
             </div>
             <div id="PARAGRAPH1" class="ladi-element">
               <div class="ladi-paragraph ladi-transition">save the date</div>
@@ -620,11 +561,11 @@
                     </svg></div>
                 </div>
                 <div id="BUTTON_TEXT2" class="ladi-element ladi-button-headline">
-                  <p class="ladi-headline ladi-transition ladi-lazyload">Thiệp mời</p>
+                  <p class="ladi-headline  ladi-transition ladi-lazyload">Thiệp mời</p>
                 </div>
               </div>
             </div>
-            <div data-action="true" id="BUTTON3" class="ladi-element ladi-animation-hidden">
+            <div data-action="true" id="BUTTON3" class="ladi-element sparkle ladi-animation-hidden">
               <div class="ladi-button ladi-transition">
                 <div class="ladi-button-background ladi-lazyload"></div>
                 <div id="BUTTON_SHAPE3" class="ladi-element ladi-button-shape">
@@ -638,12 +579,12 @@
                     </svg></div>
                 </div>
                 <div id="BUTTON_TEXT3" class="ladi-element ladi-button-headline">
-                  <p class="ladi-headline ladi-transition ladi-lazyload">Gửi lời chúc</p>
+                  <p class="ladi-headline  ladi-transition ladi-lazyload">Gửi lời chúc</p>
                 </div>
               </div>
             </div>
             <div data-action="true" id="BUTTON4" class="ladi-element ladi-animation-hidden">
-              <div class="ladi-button ladi-transition">
+              <div class="ladi-button sparkle ladi-transition">
                 <div class="ladi-button-background ladi-lazyload"></div>
                 <div id="BUTTON_SHAPE4" class="ladi-element ladi-button-shape">
                   <div class="ladi-shape ladi-transition"><svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1"
@@ -658,7 +599,7 @@
                     </svg></div>
                 </div>
                 <div id="BUTTON_TEXT4" class="ladi-element ladi-button-headline">
-                  <p class="ladi-headline ladi-transition ladi-lazyload">Mừng cưới</p>
+                  <p class="ladi-headline  ladi-transition ladi-lazyload">Mừng cưới</p>
                 </div>
               </div>
             </div>
@@ -675,7 +616,7 @@
                     </svg></div>
                 </div>
                 <div id="BUTTON_TEXT5" class="ladi-element ladi-button-headline">
-                  <p class="ladi-headline ladi-transition ladi-lazyload">. . . Xác nhận tham dự</p>
+                  <p class="ladi-headline ladi-transition ladi-lazyload">Xác nhận tham dự</p>
                 </div>
               </div>
             </div>
@@ -771,7 +712,7 @@
             </svg></div>
         </div>
         <div id="HEADLINE3" class="ladi-element ladi-animation">
-          <h3 class="ladi-headline ladi-transition">Hoàng Khánh&nbsp;<br></h3>
+          <h3 class="ladi-headline  ladi-transition">Hoàng Khánh&nbsp;<br></h3>
         </div>
         <div id="GROUP3" class="ladi-element ladi-animation">
           <div class="ladi-group">
@@ -794,7 +735,7 @@
           </div>
         </div>
         <div id="HEADLINE38" class="ladi-element ladi-animation">
-          <h3 class="ladi-headline ladi-transition">Phương Thảo</h3>
+          <h3 class="ladi-headline  ladi-transition">Phương Thảo</h3>
         </div>
       </div>
     </div>
@@ -851,7 +792,7 @@
                     </svg></div>
                 </div>
                 <div id="BUTTON_TEXT6" class="ladi-element ladi-button-headline">
-                  <p class="ladi-headline ladi-transition ladi-lazyload">Chân dung Chú Rể</p>
+                  <p class="ladi-headline  ladi-transition ladi-lazyload">Chân dung Chú Rể</p>
                 </div>
               </div>
             </div>
@@ -868,7 +809,7 @@
                     </svg></div>
                 </div>
                 <div id="BUTTON_TEXT7" class="ladi-element ladi-button-headline">
-                  <p class="ladi-headline ladi-transition ladi-lazyload">Chân dung Cô Dâu</p>
+                  <p class="ladi-headline   ladi-transition ladi-lazyload">Chân dung Cô Dâu</p>
                 </div>
               </div>
             </div>
@@ -929,7 +870,7 @@
                     </svg></div>
                 </div>
                 <div id="BUTTON_TEXT45" class="ladi-element ladi-button-headline">
-                  <p class="ladi-headline ladi-transition ladi-lazyload">Chân dung Chú Rể</p>
+                  <p class="ladi-headline  ladi-transition ladi-lazyload">Chân dung Chú Rể</p>
                 </div>
               </div>
             </div>
@@ -946,7 +887,7 @@
                     </svg></div>
                 </div>
                 <div id="BUTTON_TEXT46" class="ladi-element ladi-button-headline">
-                  <p class="ladi-headline ladi-transition ladi-lazyload">Chân dung Cô Dâu</p>
+                  <p class="ladi-headline  ladi-transition ladi-lazyload">Chân dung Cô Dâu</p>
                 </div>
               </div>
             </div>
@@ -1002,10 +943,11 @@
         <div id="GROUP107" class="ladi-element">
           <div class="ladi-group">
             <div id="HEADLINE50" class="ladi-element">
-              <h2 class="ladi-headline ladi-lazyload">- Meeting and Falling in Love -</h2>
+              <h2 class="ladi-headline  ladi-lazyload">- Meeting and Falling in Love -</h2>
             </div>
             <div id="HEADLINE51" class="ladi-element">
-              <h2 class="ladi-headline ladi-lazyload">Có em, mỗi khoảnh khắc bình thường <br>đều trở thành một kỷ niệm
+              <h2 class="ladi-headline  ladi-lazyload">Có em, mỗi khoảnh khắc bình thường <br>đều trở thành một
+                kỷ niệm
                 đáng nhớ</h2>
             </div>
           </div>
@@ -1605,15 +1547,10 @@
 
         <div id="GROUP109" class="ladi-element">
           <div class="ladi-group">
-            <div id="HEADLINE55" class="ladi-element">
+            <div id="HEADLINE55" class="ladi-element ">
               <h3 class="ladi-headline ladi-lazyload">Wedding Video<br></h3>
             </div>
             <div id="SHAPE113" class="ladi-element">
-
-              <!-- <div class="ladi-shape ladi-transition"><svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%"
-                  preserveAspectRatio="none" viewBox="0 0 356.13 42.62" class="" fill="#000">
-                  <use xlink:href="#shape_imNPyGWuwx"></use>
-                </svg></div> -->
             </div>
           </div>
         </div>
@@ -1642,7 +1579,9 @@
             </div>
           </div>
         </div>
-        <div id="FORM2" data-config-id="66d360f3b4577100128b7bb4" class="ladi-element">
+        <!-- Wishes two-column layout -->
+        <!-- KEEP your existing form block exactly as-is -->
+        <div id="FORM2" data-config-id="66d360f3b4577100128b7bb4" class="ladi-form">
           <form autocomplete="off" method="post" class="ladi-form">
             <div id="WISH_SUBMIT_BUTTON" class="ladi-element">
               <div class="ladi-button ladi-transition">
@@ -1684,7 +1623,8 @@
                 <div class="ladi-form-item"><select tabindex="4" name="form_item5"
                     class="ladi-form-control ladi-form-control-select" data-selected="">
                     <option value="">Lời chúc gợi ý </option>
-                    <option value="Chúc hai bạn mãi mãi hạnh phúc bên nhau ❤️💍">Chúc hai bạn mãi mãi hạnh phúc bên nhau
+                    <option value="Chúc hai bạn mãi mãi hạnh phúc bên nhau ❤️💍">Chúc hai bạn mãi mãi hạnh phúc bên
+                      nhau
                       ❤️💍</option>
                     <option value="Happy Wedding 🎉🎊 Chúc hai bạn trăm năm viên mãn, sớm có 1 thiên thần nha! 👶✨">
                       Happy Wedding 🎉🎊 Chúc hai bạn trăm năm viên mãn, sớm có 1 thiên thần nha! 👶✨</option>
@@ -1696,29 +1636,35 @@
                       đầu! 💑</option>
                     <option
                       value="Mong hai bạn sẽ luôn yêu thương, tôn trọng nhau 🥰. Hãy cùng nhau xây dựng một tổ ấm đầy ắp tiếng cười nhé! 🏡💕">
-                      Mong hai bạn sẽ luôn yêu thương, tôn trọng nhau 🥰. Hãy cùng nhau xây dựng một tổ ấm đầy ắp tiếng
+                      Mong hai bạn sẽ luôn yêu thương, tôn trọng nhau 🥰. Hãy cùng nhau xây dựng một tổ ấm đầy ắp
+                      tiếng
                       cười nhé! 🏡💕</option>
                     <option
                       value="Chúc hai bạn có một cuộc sống hôn nhân tràn đầy niềm vui 😍, luôn bên nhau vượt qua mọi sóng gió! 🌊🤝">
-                      Chúc hai bạn có một cuộc sống hôn nhân tràn đầy niềm vui 😍, luôn bên nhau vượt qua mọi sóng gió!
+                      Chúc hai bạn có một cuộc sống hôn nhân tràn đầy niềm vui 😍, luôn bên nhau vượt qua mọi sóng
+                      gió!
                       🌊🤝</option>
                     <option
                       value="Chúc hai bạn có một tình yêu đẹp như cổ tích 📖✨ và một cuộc sống hôn nhân như mơ! 🏰💖">
-                      Chúc hai bạn có một tình yêu đẹp như cổ tích 📖✨ và một cuộc sống hôn nhân như mơ! 🏰💖</option>
+                      Chúc hai bạn có một tình yêu đẹp như cổ tích 📖✨ và một cuộc sống hôn nhân như mơ! 🏰💖
+                    </option>
                     <option
                       value="Hôm nay là ngày đặc biệt của hai bạn 🎊. Chúc hai bạn một chặng đường dài đầy yêu thương và hạnh phúc! ❤️">
-                      Hôm nay là ngày đặc biệt của hai bạn 🎊. Chúc hai bạn một chặng đường dài đầy yêu thương và hạnh
+                      Hôm nay là ngày đặc biệt của hai bạn 🎊. Chúc hai bạn một chặng đường dài đầy yêu thương và
+                      hạnh
                       phúc! ❤️</option>
                     <option
                       value="Chúc hai bạn mãi mãi là tri kỷ, là chỗ dựa của nhau trong mọi khoảnh khắc cuộc đời! 👫💞">
-                      Chúc hai bạn mãi mãi là tri kỷ, là chỗ dựa của nhau trong mọi khoảnh khắc cuộc đời! 👫💞</option>
+                      Chúc hai bạn mãi mãi là tri kỷ, là chỗ dựa của nhau trong mọi khoảnh khắc cuộc đời! 👫💞
+                    </option>
                     <option
                       value="Một chương mới đã mở ra 📖💏. Chúc hai bạn một cuộc sống hôn nhân ngập tràn yêu thương và niềm vui! 🎊">
                       Một chương mới đã mở ra 📖💏. Chúc hai bạn một cuộc sống hôn nhân ngập tràn yêu thương và niềm
                       vui! 🎊</option>
                     <option
                       value="Từ hôm nay, hai bạn không chỉ là một đôi uyên ương mà còn là gia đình của nhau! 👩‍❤️‍👨💖 Chúc hai bạn mãi hạnh phúc!">
-                      Từ hôm nay, hai bạn không chỉ là một đôi uyên ương mà còn là gia đình của nhau! 👩‍❤️‍👨💖 Chúc
+                      Từ hôm nay, hai bạn không chỉ là một đôi uyên ương mà còn là gia đình của nhau! 👩‍❤️‍👨💖
+                      Chúc
                       hai bạn mãi hạnh phúc!</option>
                     <option
                       value="Chúc hai bạn có một cuộc sống hôn nhân viên mãn, cùng nhau vượt qua mọi thử thách và luôn trân trọng nhau! 💑✨">
@@ -1729,6 +1675,26 @@
             </div><button type="submit" class="ladi-hidden"></button>
           </form>
         </div>
+
+        <!-- New: fancy card list -->
+        <aside class="wish-list-col" aria-label="Guest wishes">
+          <div class="wish-list-head">
+            <h3 class="wish-list-title">Lời chúc từ mọi người</h3>
+            <button type="button" class="wish-refresh" id="wishRefreshBtn" aria-label="Refresh wishes">↻</button>
+          </div>
+
+          <div id="wishList" class="wish-list">
+            <!-- Cards will be injected by JS -->
+            <!-- Fallback sample while loading -->
+            <article class="wish-card">
+              <div class="wish-card-head">
+                <span class="wish-name">Bạn bè</span>
+                <time class="wish-time" datetime="">Đang tải…</time>
+              </div>
+              <p class="wish-msg">Tin nhắn lời chúc sẽ hiện ở đây.</p>
+            </article>
+          </div>
+        </aside>
       </div>
     </div>
     <div id="SECTION19" class="ladi-section">
@@ -1736,7 +1702,7 @@
       <div class="ladi-container">
         <div id="GROUP56" class="ladi-element">
           <div class="ladi-group">
-            <div id="HEADLINE26" class="ladi-element">
+            <div id="HEADLINE26" class="ladi-element ">
               <!-- wedding photo -->
               <h3 class="ladi-headline ladi-lazyload">Wedding Photos<br></h3>
             </div>
@@ -1821,7 +1787,7 @@
               <use xlink:href="#shape_HxNejqSQrO"></use>
             </svg></div>
         </div>
-        <div id="GALLERY5" class="ladi-element" data-max-item="3" data-runtime-id="SaFTijKeKB" data-current="0"
+        <div id="GALLERY5" class="ladi-element " data-max-item="3" data-runtime-id="SaFTijKeKB" data-current="0"
           data-is-next="true" data-scrolled="false" data-loaded="true">
           <div class="ladi-gallery ladi-gallery-bottom">
             <div class="ladi-gallery-view" style="cursor: pointer;">
@@ -1899,7 +1865,7 @@
             </div>
             <div data-action="true" id="GROUP92" class="ladi-element">
               <div class="ladi-group">
-                <div data-action="true" id="BUTTON54" class="ladi-element">
+                <div data-action="true" id="BUTTON54" class="ladi-element sparkle">
                   <div class="ladi-button ladi-transition">
                     <div class="ladi-button-background ladi-lazyload"></div>
                     <div id="BUTTON_TEXT54" class="ladi-element ladi-button-headline">
@@ -1956,7 +1922,8 @@
                     </svg></div>
                 </div>
                 <div id="PARAGRAPH135" class="ladi-element">
-                  <div class="ladi-paragraph ladi-transition">11h30 Thứ 7 ngày 29-11-2025<br>&nbsp;(Nhằm ngày 10/10 năm
+                  <div class="ladi-paragraph ladi-transition">11h30 Thứ 7 ngày 29-11-2025<br>&nbsp;(Nhằm ngày 10/10
+                    năm
                     Ất Tỵ)</div>
                 </div>
               </div>
@@ -2023,7 +1990,8 @@
                     </svg></div>
                 </div>
                 <div id="PARAGRAPH137" class="ladi-element">
-                  <div class="ladi-paragraph ladi-transition">10h00p Chủ Nhật ngày 30-11-2025<br>&nbsp;(Nhằm ngày 11/10
+                  <div class="ladi-paragraph ladi-transition">10h00p Chủ Nhật ngày 30-11-2025<br>&nbsp;(Nhằm ngày
+                    11/10
                     năm Ất Tỵ)</div>
                 </div>
               </div>
@@ -2090,7 +2058,8 @@
                     </svg></div>
                 </div>
                 <div id="PARAGRAPH139" class="ladi-element">
-                  <div class="ladi-paragraph ladi-transition">11h00p Chủ Nhật ngày 30-11-2025<br>&nbsp;(Nhằm ngày 11/10
+                  <div class="ladi-paragraph ladi-transition">11h00p Chủ Nhật ngày 30-11-2025<br>&nbsp;(Nhằm ngày
+                    11/10
                     năm Ất Tỵ)</div>
                 </div>
               </div>
@@ -2140,7 +2109,7 @@
       <div class="ladi-container">
         <div id="GROUP36" class="ladi-element">
           <div class="ladi-group">
-            <div id="HEADLINE18" class="ladi-element">
+            <div id="HEADLINE18" class="ladi-element ">
               <h3 class="ladi-headline ladi-transition ladi-lazyload">Wedding Money Box<br></h3>
             </div>
             <div id="SHAPE58" class="ladi-element">
@@ -2266,7 +2235,8 @@
           </div>
         </div>
         <div id="PARAGRAPH123" class="ladi-element">
-          <div class="ladi-paragraph ladi-transition">Sự có mặt của bạn là niềm vui lớn đối với chúng tôi 💖 Vui lòng
+          <div class="ladi-paragraph ladi-transition">Sự có mặt của bạn là niềm vui lớn đối với chúng tôi 💖 Vui
+            lòng
             xác nhận để buổi tiệc được chuẩn bị thật
             <br>chỉn chu nhé! Xin cảm ơn rất nhiều!<br>
           </div>
@@ -2281,7 +2251,7 @@
                 <div id="RSVP_SUBMIT_BUTTON" class="ladi-element">
                   <div class="ladi-button ladi-transition">
                     <div class="ladi-button-background ladi-lazyload"></div>
-                    <div id="BUTTON_TEXT53" class="ladi-element ladi-button-headline">
+                    <div id="BUTTON_TEXT53" class="ladi-element ladi-button-headline button-romantic">
                       <p class="ladi-headline ladi-transition ladi-lazyload">Xác nhận</p>
                     </div>
                   </div>
@@ -2306,7 +2276,8 @@
                     <div class="ladi-form-item ladi-form-checkbox ladi-form-checkbox-horizontal">
                       <div class="ladi-form-checkbox-box-item">
                         <div class="ladi-form-checkbox-item"><input tabindex="7" name="form_item" required=""
-                            type="radio" value="Có, tôi sẽ đến"><span data-checked="false">Có, tôi sẽ đến</span></div>
+                            type="radio" value="Có, tôi sẽ đến"><span data-checked="false">Có, tôi sẽ đến</span>
+                        </div>
                         <div class="ladi-form-checkbox-item"><input tabindex="7" name="form_item" required=""
                             type="radio" value="Xin lỗi, tôi bận mất"><span data-checked="false">Xin lỗi, tôi bận
                             mất</span></div>
@@ -2355,7 +2326,7 @@
         </div>
         <div id="GROUP42" class="ladi-element">
           <div class="ladi-group">
-            <div data-action="true" id="BUTTON22" class="ladi-element ladi-animation">
+            <div data-action="true" id="BUTTON22" class="ladi-element ladi-animation sparkle">
               <div class="ladi-button ladi-transition">
                 <div class="ladi-button-background"></div>
                 <div id="BUTTON_TEXT22" class="ladi-element ladi-button-headline">
@@ -2407,7 +2378,7 @@
         <div id="POPUP2" class="ladi-element">
           <div class="ladi-popup">
             <div class="ladi-popup-background"></div>
-            <div id="GALLERY2" class="ladi-element" data-max-item="6" data-runtime-id="RjArWGPFpI" data-current="1"
+            <div id="GALLERY2" class="ladi-element " data-max-item="6" data-runtime-id="RjArWGPFpI" data-current="1"
               data-is-next="true" data-scrolled="true" data-loaded="true" data-next-time="1760239750157">
               <div class="ladi-gallery ladi-gallery-bottom">
                 <div class="ladi-gallery-view" style="cursor: pointer;">
@@ -2451,7 +2422,8 @@
             <div class="ladi-popup-background"></div>
             <div class="ladi-overlay ladi-lazyload"></div>
             <div id="PARAGRAPH47" class="ladi-element">
-              <div class="ladi-paragraph ladi-transition">Cảm ơn bạn đã phản hồi cho vợ chồng mình nha ♥ ♥&nbsp;</div>
+              <div class="ladi-paragraph ladi-transition">Cảm ơn bạn đã phản hồi cho vợ chồng mình nha ♥ ♥&nbsp;
+              </div>
             </div>
           </div>
         </div>
@@ -4841,8 +4813,8 @@
         window.LadiPageScript.runtime.publish_platform = 'LADIPAGEDNS';
         window.LadiPageScript.runtime.version = '1757644102164';
         window.LadiPageScript.runtime.cdn_url = 'https://w.ladicdn.com/v5/source/';
-        window.LadiPageScript.runtime.DOMAIN_SET_COOKIE = ["happyweddingday.vn"];
-        window.LadiPageScript.runtime.DOMAIN_FREE = ["preview.ldpdemo.com", "ldp.page"];
+        // window.LadiPageScript.runtime.DOMAIN_SET_COOKIE = ["happyweddingday.vn"];
+        // window.LadiPageScript.runtime.DOMAIN_FREE = ["preview.ldpdemo.com", "ldp.page"];
         window.LadiPageScript.runtime.bodyFontSize = 12;
         window.LadiPageScript.runtime.store_id = "6833feb01c8070001239a3de";
         window.LadiPageScript.runtime.store_ladiuid = "6833feaf80878700201c8921";
@@ -4862,12 +4834,15 @@
     }
     )();
   </script>
+
+  <div id="fireflies" aria-hidden="true"></div>
+  <div class="aurora" aria-hidden="true"><span></span><span></span><span></span></div>
   <!-- OVERLAY LẤP LÁNH (TRONG SUỐT) -->
-  <!-- <div class="sparkle-overlay" aria-hidden="true">
+  <div class="sparkle-overlay" aria-hidden="true">
     <div class="spark"
       style="left: 96.5018%; top: -62.862%; --size: 5.397182110790324px; --fall: 25.20134626944125s; --sway: 3.303443223586675s; --blink: 1.1086338239504845s; --delay: 0.709625911338021s;">
     </div>
-     <div class="spark"
+    <div class="spark"
       style="left: 11.2112%; top: -117.909%; --size: 5.272852090817938px; --fall: 16.109972380466143s; --sway: 4.154424966876246s; --blink: 1.5878417599302148s; --delay: 1.0052160006959148s;">
     </div>
     <div class="spark"
@@ -4954,7 +4929,7 @@
     <div class="spark"
       style="left: 15.4372%; top: -88.2359%; --size: 3.4678551088746543px; --fall: 14.470245451746386s; --sway: 3.7110779905867406s; --blink: 1.0879175019070177s; --delay: 0.32904762245278374s;">
     </div>
-  </div>  -->
+  </div>
 
   <!-- <style>
     .sparkle-overlay {
@@ -4963,7 +4938,7 @@
       pointer-events: none;
       z-index: 9999;
       /* nếu nền sáng, bỏ comment dòng dưới để chói hơn */
-      /* mix-blend-mode: screen; */
+      mix-blend-mode: screen;
     }
 
     .spark {
@@ -5049,133 +5024,16 @@
       }
     }
   </style> -->
+  <!-- Floating hearts container -->
+  <div style="position: fixed; bottom: 0; left: 50%; transform: translateX(-50%); z-index: 9999;">
+    <div class="heart" style="animation-delay: 0s;"></div>
+    <div class="heart" style="animation-delay: 1s;"></div>
+    <div class="heart" style="animation-delay: 2s;"></div>
+  </div>
 
-  <script>
-    (function () {
-      // === THIẾT LẬP MẬT ĐỘ & TỐC ĐỘ ===
-      const DENSITY = 0.000022;         // thấp = thưa hơn
-      const MIN_COUNT = 30;
-      const MAX_COUNT = 70;
-      const SPAWN_INTERVAL = [80, 220]; // ms, tạo “nhỏ giọt”
+  <script src="./animations.js"></script>
 
-      const area = window.innerWidth * window.innerHeight;
-      const COUNT = Math.max(MIN_COUNT, Math.min(MAX_COUNT, Math.round(area * DENSITY)));
-
-      const root = document.querySelector('.sparkle-overlay');
-      if (!root) return; // không có overlay thì khỏi chạy
-
-      function make() {
-        const d = document.createElement('div');
-        d.className = 'spark';
-
-        // rơi CHẬM & lắc NHẸ
-        const fall = 14 + Math.random() * 12;   // 14–26s
-        const sway = 2.8 + Math.random() * 1.6; // 2.8–4.4s
-        const blink = 1.0 + Math.random() * 0.9; // 1.0–1.9s
-        const size = 3 + Math.random() * 5;     // 3–8px
-        const delay = Math.random() * blink;
-
-        d.style.left = (Math.random() * 100) + '%';
-        d.style.top = (-10 - Math.random() * 120) + '%';
-        d.style.setProperty('--size', size + 'px');
-        d.style.setProperty('--fall', fall + 's');
-        d.style.setProperty('--sway', sway + 's');
-        d.style.setProperty('--blink', blink + 's');
-        d.style.setProperty('--delay', delay + 's');
-
-        root.appendChild(d);
-      }
-
-      // tạo “nhỏ giọt” cho tới COUNT
-      let made = 0;
-      (function spawnLoop() {
-        if (made >= COUNT) return;
-        make(); made++;
-        const [a, b] = SPAWN_INTERVAL;
-        setTimeout(spawnLoop, a + Math.random() * (b - a));
-      })();
-    })();
-  </script>
-
-
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const urlWish = 'https://kelbe-graybuster412s-projects.vercel.app/api/addWish';
-      const urlRsvp = 'https://kelbe-graybuster412s-projects.vercel.app/api/rsvp';
-
-      async function postData(data, url) {
-        try {
-          const res = await fetch(url, {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data)
-          });
-          if (!res.ok) throw new Error(`Lỗi HTTP: ${res.status}`);
-          return await res.json();
-        } catch (err) {
-          console.error('❌ Gửi thất bại:', err);
-          return null;
-        }
-      }
-
-      // GỬI LỜI CHÚC
-      document.getElementById("WISH_SUBMIT_BUTTON")?.addEventListener("click", async () => {
-        const name = document.querySelector("#WISH_NAME_INPUT input")?.value.trim() || "";
-        const relationship = document.querySelector("#WISH_RELATION_SELECT select")?.value || "";
-        const message = document.querySelector("#WISH_MESSAGE_TEXTAREA textarea")?.value.trim() || "";
-        const predefined = document.querySelector("#WISH_PREDEFINED_SELECT select")?.value || "";
-
-        if (!name) return alert("Vui lòng nhập tên.");
-        if (!relationship) return alert("Vui lòng chọn mối quan hệ.");
-        if (!message && !predefined) return alert("Vui lòng nhập hoặc chọn lời chúc.");
-
-        const combinedMessage = message && predefined ? `${message} / ${predefined}` : message || predefined;
-
-        const data = {
-          fullname: name,
-          relationship,
-          wish_msg: combinedMessage,
-          predefined_wish: predefined,
-        };
-
-        const result = await postData(data, urlWish);
-        if (result) alert(`🎉 Cảm ơn bạn ${name} đã gửi lời chúc đến tụi mình!`);
-      });
-
-      // GỬI XÁC NHẬN THAM DỰ
-      document.getElementById("RSVP_SUBMIT_BUTTON")?.addEventListener("click", async () => {
-        const name = document.querySelector("#RSVP_NAME_INPUT input")?.value.trim() || "";
-        const isAttending = document.querySelector('#RSVP_ATTENDING_RADIO input[type="radio"]:checked')?.value;
-        const party = document.querySelector("#RSVP_PARTY_SELECT select")?.value || "";
-        const guestCount = document.querySelector("#RSVP_GUEST_COUNT_SELECT select")?.value || "";
-        const message = document.querySelector("#RSVP_MESSAGE_TEXTAREA textarea")?.value.trim() || "";
-        const attendingStatus = (statusMsg) => {
-          return statusMsg === "Xin lỗi, tôi bận mất rồi" ? "no" : "yes"
-        }
-
-        if (!name) return alert("Vui lòng nhập tên.");
-        if (!isAttending) return alert("Vui lòng chọn tham dự hay không.");
-        if (isAttending !== "Xin lỗi, tôi bận mất rồi" && !party)
-          return alert("Vui lòng chọn tiệc muốn tham dự.");
-        if (isAttending !== "Xin lỗi, tôi bận mất rồi" && !guestCount)
-          return alert("Vui lòng chọn số lượng khách.");
-
-        const data = {
-          fullname: name,
-          email: name,
-          status: attendingStatus(isAttending),
-          guests: guestCount,
-          place: party,
-          message,
-        };
-
-        const result = await postData(data, urlRsvp);
-        if (result) alert(`✅ Cảm ơn bạn ${name} đã xác nhận tham dự!`);
-      });
-    });
-  </script>
+  <script src="./actions.js"></script>
 
   <script>
     const fullUrl = window.location.href;
@@ -5199,11 +5057,13 @@
       }
     });
   </script>
+
   <script defer=""
     src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015"
     integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ=="
     data-cf-beacon="{&quot;version&quot;:&quot;2024.11.0&quot;,&quot;token&quot;:&quot;29085841b8e5436f8a280f5e2fbc45e0&quot;,&quot;r&quot;:1,&quot;server_timing&quot;:{&quot;name&quot;:{&quot;cfCacheStatus&quot;:true,&quot;cfEdge&quot;:true,&quot;cfExtPri&quot;:true,&quot;cfL4&quot;:true,&quot;cfOrigin&quot;:true,&quot;cfSpeedBrain&quot;:true},&quot;location_startswith&quot;:null}}"
     crossorigin="anonymous"></script>
+
 </body>
 
 </html>

@@ -84,7 +84,7 @@ h3,
     z-index: 9999;
 }
 
-/* Countdown boxes don’t overflow */
+/* Countdown boxes donâ€™t overflow */
 #GROUP14,
 #GROUP15,
 .ladi-countdown {
@@ -131,7 +131,6 @@ h3,
         padding: 16px;
     }
 }
-
 
 a,
 abbr,
@@ -2136,11 +2135,11 @@ body {
     pointer-events: none;
 }
 
-/* Hiệu ứng rung, xoay và phát sáng đỏ đậm */
-.vibrating {
+/* Hiá»‡u á»©ng rung, xoay vÃ  phÃ¡t sÃ¡ng Ä‘á» Ä‘áº­m */
+/* .vibrating {
     animation: pulse 1.2s infinite, rotate 4s linear infinite, glow 2s ease-in-out infinite;
     box-shadow: 0 0 15px rgba(139, 0, 0, 0.6), 0 0 25px rgba(139, 0, 0, 0.4);
-}
+} */
 
 @keyframes pulse {
     0% {
@@ -2234,9 +2233,9 @@ body {
 .left-door {
     left: 0;
     width: 50vw;
-    /* ← Chỉ chiếm 1 nửa màn hình */
+    /* â† Chá»‰ chiáº¿m 1 ná»­a mÃ n hÃ¬nh */
     background-image: url('https://w.ladicdn.com/6833feb01c8070001239a3de/group-3-20250824102047-ndwhw.png');
-    /* ← Thay ảnh trái */
+    /* â† Thay áº£nh trÃ¡i */
     transition: transform 4s ease-in-out;
 
     z-index: 10000;
@@ -2246,9 +2245,9 @@ body {
 .right-door {
     left: 0;
     width: 100vw;
-    /* ← Phủ toàn bộ màn hình */
+    /* â† Phá»§ toÃ n bá»™ mÃ n hÃ¬nh */
     background-image: url('https://w.ladicdn.com/6833feb01c8070001239a3de/group-4-20250824102047-pzoje.png');
-    /* ← Thay ảnh phải */
+    /* â† Thay áº£nh pháº£i */
     transition: transform 6s ease-in-out;
     z-index: 10001;
     transform: translateX(0);
@@ -6009,7 +6008,7 @@ body.open .right-door {
     }
 
     #SECTION_GUILOICHUC {
-        height: 639.5px;
+        height: 850.5px;
     }
 
     #PARAGRAPH19 {
@@ -6032,6 +6031,12 @@ body.open .right-door {
         height: 306px;
         top: 248.5px;
         left: 198px;
+    }
+
+    .wish-list-col {
+        top: 350.5px;
+        left: 198px;
+        width: 593px;
     }
 
     #GROUP35 {
@@ -8493,7 +8498,7 @@ body.open .right-door {
     }
 
     #SECTION_GUILOICHUC {
-        height: 458.5px;
+        height: 658.5px;
     }
 
     #PARAGRAPH19,
@@ -9337,4 +9342,394 @@ body.open .right-door {
     #GALLERY4 .ladi-gallery .ladi-gallery-view-item[data-index="0"] {
         background-image: url("https://graybuster412.github.io/kel_pics/kel4154.jpg");
     }
+}
+
+/* --- Fireflies --- */
+#fireflies {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 90000020;
+}
+
+.firefly {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 200, .95) 0 40%, rgba(255, 255, 200, .15) 60% 100%);
+    box-shadow: 0 0 8px 2px rgba(255, 255, 160, .6);
+    animation: fly var(--t, 12s) linear infinite, twinkle 2.4s ease-in-out infinite;
+    opacity: .9;
+}
+
+@keyframes fly {
+    0% {
+        transform: translate(var(--x0, 0), var(--y0, 0));
+    }
+
+    100% {
+        transform: translate(var(--x1, 0), var(--y1, 0));
+    }
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        filter: brightness(1);
+    }
+
+    50% {
+        filter: brightness(1.5);
+    }
+}
+
+/* --- Aurora Gradient Glow --- */
+.aurora {
+    position: absolute;
+    inset: -20vh -10vw;
+    z-index: -1;
+    filter: blur(60px);
+    overflow: hidden;
+}
+
+.aurora span {
+    position: absolute;
+    width: 60vw;
+    height: 60vw;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #ffb6c1 0 20%, transparent 60%);
+    mix-blend-mode: screen;
+    opacity: .6;
+    animation: drift 24s ease-in-out infinite;
+}
+
+.aurora span:nth-child(2) {
+    background: radial-gradient(circle at 70% 30%, #ffd1dc 0 20%, transparent 60%);
+    animation-duration: 28s;
+}
+
+.aurora span:nth-child(3) {
+    background: radial-gradient(circle at 50% 70%, #ffe6f0 0 20%, transparent 60%);
+    animation-duration: 32s;
+}
+
+/* --- Ribbon Wipe Reveal --- */
+.reveal-ribbon {
+    position: relative;
+    overflow: hidden;
+    --dur: .9s;
+}
+
+.reveal-ribbon::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(90deg, rgba(255, 255, 255, .9), rgba(255, 255, 255, 0));
+    transform: translateX(-100%);
+}
+
+.reveal-ribbon.is-in::before {
+    animation: ribbon var(--dur) ease both;
+}
+
+.reveal-ribbon>* {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity var(--dur) ease, transform var(--dur) ease;
+}
+
+.reveal-ribbon.is-in>* {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes ribbon {
+    to {
+        transform: translateX(110%);
+    }
+}
+
+@keyframes drift {
+
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    50% {
+        transform: translate(6vw, -4vh) scale(1.08);
+    }
+}
+
+/* === Romantic Animations Pack (added) === */
+
+/* --- Romantic Petal Rain --- */
+#petal-field {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 90000030;
+    overflow: hidden;
+}
+
+.petal {
+    position: absolute;
+    top: -10vh;
+    width: clamp(10px, 1.8vw, 24px);
+    aspect-ratio: 1/1;
+    background: radial-gradient(closest-side, #ffdee6 0 60%, #f9b9c7 61% 100%);
+    border-radius: 60% 40% 70% 30% / 60% 40% 60% 40%;
+    opacity: .85;
+    filter: blur(.2px);
+    animation-name: petal-fall, petal-sway, petal-rotate;
+    animation-timing-function: linear, ease-in-out, ease-in-out;
+    animation-iteration-count: 1, infinite, infinite;
+}
+
+@keyframes petal-fall {
+    to {
+        transform: translateY(110vh)
+    }
+}
+
+@keyframes petal-sway {
+
+    0%,
+    100% {
+        transform: translateX(0)
+    }
+
+    50% {
+        transform: translateX(7vw)
+    }
+}
+
+/* --- Heartbeat pulse for music toggle --- */
+.vibrating {
+    animation: heartbeat 1.6s ease-in-out infinite;
+    box-shadow: 0 0 0 rgba(220, 20, 60, .35);
+}
+
+@keyframes heartbeat {
+
+    0%,
+    100% {
+        transform: scale(1);
+        box-shadow: 0 0 0 0 rgba(220, 20, 60, .25);
+    }
+
+    14% {
+        transform: scale(1.06);
+        box-shadow: 0 0 12px 6px rgba(220, 20, 60, .20);
+    }
+
+    28% {
+        transform: scale(1);
+    }
+
+    42% {
+        transform: scale(1.06);
+        box-shadow: 0 0 12px 6px rgba(220, 20, 60, .20);
+    }
+
+    70% {
+        transform: scale(1);
+    }
+}
+
+/* Floating hearts */
+@keyframes floatHeart {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100px) scale(1.2);
+        opacity: 0;
+    }
+}
+
+.heart {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url('https://cdn-icons-png.flaticon.com/512/833/833472.png') no-repeat center;
+    background-size: contain;
+    animation: floatHeart 4s ease-in infinite;
+}
+
+
+/* ========== Wishes two-column layout ========== */
+.wish-wrap {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: start;
+    background-color: red;
+}
+
+.wish-form-col {
+    /* Let the Ladi form keep its own sizing rules, but prevent overflow */
+    min-width: 0;
+}
+
+/* List column */
+.wish-list-col {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(6px);
+    border-radius: 16px;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, .08);
+    padding: 16px;
+    min-height: 220px;
+    position: absolute;
+}
+
+/* On larger screens, show 2 columns */
+@media (min-width: 900px) {
+    /* .wish-wrap {
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    } */
+
+    .wish-list-col {
+        top: 580px;
+        left: 200px;
+        width: 590px;
+    }
+}
+
+/* On smaller screens */
+@media (max-width: 768px) {
+    .wish-list-col {
+        top: 430px;
+        left: 20px;
+        width: 380px;
+    }
+
+}
+
+/* On smaller screens */
+@media (max-width: 767px) {
+    /* .wish-wrap {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    } */
+
+    .wish-list-col {
+        top: 430px;
+        left: 20px;
+        width: 380px;
+    }
+
+}
+
+.wish-list-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.wish-list-title {
+    font-size: 20px;
+    font-family: QWxleEJydXNoLVJlZVsYXIudHRm;
+    line-height: 1.3;
+    margin: 0;
+}
+
+.wish-refresh {
+    border: 0;
+    background: #f3f3f3;
+    border-radius: 10px;
+    padding: 6px 10px;
+    cursor: pointer;
+    transition: transform .15s ease;
+}
+
+.wish-refresh:active {
+    transform: scale(0.96);
+}
+
+/* Cards container */
+.wish-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+    max-height: 520px;
+    overflow: auto;
+    scrollbar-width: thin;
+}
+
+/* Individual card */
+.wish-card {
+    position: relative;
+    border-radius: 14px;
+    padding: 14px 14px 14px 18px;
+    background: linear-gradient(180deg, #fff, #fff8fa);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .06);
+    border: 1px solid rgba(255, 105, 135, .25);
+    animation: cardIn .4s ease both;
+}
+
+/* Romantic accent â€œribbonâ€ */
+.wish-card::before {
+    content: "";
+    position: absolute;
+    inset: -1px 0 auto auto;
+    width: 68px;
+    height: 8px;
+    border-radius: 0 12px 0 12px;
+    background: linear-gradient(90deg, #ff9db4, #ff6b8a);
+    opacity: .9;
+}
+
+@keyframes cardIn {
+    from {
+        transform: translateY(8px);
+        opacity: 0;
+    }
+}
+
+.wish-card-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 6px;
+}
+
+.wish-name {
+    font-weight: 700;
+    letter-spacing: .2px;
+}
+
+.wish-time {
+    font-size: 12px;
+    opacity: .65;
+}
+
+.wish-msg {
+    margin: 0;
+    line-height: 1.55;
+}
+
+/* Subtle heart bullets within messages if you use <li> inside .wish-msg */
+.wish-msg li {
+    list-style: none;
+    position: relative;
+    padding-left: 18px;
+}
+
+.wish-msg li::before {
+    content: "â¤";
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 12px;
+    opacity: .7;
 }
