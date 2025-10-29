@@ -9119,7 +9119,7 @@ body.open .right-door {
         height: 205.777px;
         top: -59.778px;
         left: -31.906px;
-        background-image: url("https://graybuster412.github.io/kel_pics/ma_qr_cua_toi.png");
+        background-image: url("https://graybuster412.github.io/kel_pics/qr_cua_tui.png");
     }
 
     /* my QR */
@@ -9360,7 +9360,7 @@ body.open .right-door {
     background: radial-gradient(circle, rgba(255, 255, 200, .95) 0 40%, rgba(255, 255, 200, .15) 60% 100%);
     box-shadow: 0 0 8px 2px rgba(255, 255, 160, .6);
     animation: fly var(--t, 12s) linear infinite, twinkle 2.4s ease-in-out infinite;
-    opacity: .9;
+    opacity: 1;
 }
 
 @keyframes fly {
@@ -9584,21 +9584,42 @@ body.open .right-door {
     border-radius: 16px;
     box-shadow: 0 8px 28px rgba(0, 0, 0, .08);
     padding: 16px;
+    min-width: 220px;
     min-height: 220px;
     position: absolute;
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+    /* Firefox */
+}
+
+/* Pretty scrollbar for Chrome/Edge/Safari */
+.wish-list::-webkit-scrollbar {
+    width: 8px;
+}
+
+.wish-list::-webkit-scrollbar-track {
+    background: rgba(255, 240, 245, 0.6);
+    border-radius: 10px;
+}
+
+.wish-list::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #ff9db4, #ff6b8a);
+    border-radius: 10px;
+    box-shadow: 0 0 8px rgba(255, 150, 170, .4);
+}
+
+.wish-list::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #ff8ca3, #ff4d6d);
 }
 
 /* On larger screens, show 2 columns */
 @media (min-width: 900px) {
-    /* .wish-wrap {
-        grid-template-columns: 1fr 1fr;
-        gap: 24px;
-    } */
-
     .wish-list-col {
         top: 580px;
         left: 200px;
         width: 590px;
+        max-height: 300px;
     }
 }
 
@@ -9608,23 +9629,18 @@ body.open .right-door {
         top: 430px;
         left: 20px;
         width: 380px;
+        max-height: 240px;
     }
-
 }
 
 /* On smaller screens */
-@media (max-width: 767px) {
-    /* .wish-wrap {
-        grid-template-columns: 1fr;
-        gap: 24px;
-    } */
-
+@media (max-width: 600px) {
     .wish-list-col {
         top: 430px;
         left: 20px;
         width: 380px;
+        max-height: 220px;
     }
-
 }
 
 .wish-list-head {
@@ -9661,8 +9677,8 @@ body.open .right-door {
     grid-template-columns: 1fr;
     gap: 12px;
     max-height: 520px;
-    overflow: auto;
-    scrollbar-width: thin;
+    /* overflow: auto;
+    scrollbar-width: thin; */
 }
 
 /* Individual card */
@@ -9732,4 +9748,240 @@ body.open .right-door {
     top: 0;
     font-size: 12px;
     opacity: .7;
+}
+
+/* === Romantic Toast (top-right) === */
+.toast-host {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 999999;
+    pointer-events: none;
+}
+
+/* base card */
+.toast {
+    pointer-events: auto;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(8px);
+    border-radius: 14px;
+    border: 1px solid rgba(255, 170, 190, 0.6);
+    box-shadow: 0 10px 25px rgba(255, 120, 150, 0.25);
+    padding: 12px 18px;
+    min-width: 220px;
+    font-weight: 600;
+    font-size: 15px;
+    color: #6b2241;
+    position: relative;
+    overflow: hidden;
+    animation: toastSlideIn 0.6s cubic-bezier(0.17, 0.84, 0.44, 1) both,
+        toastFadeOut 0.6s ease-in 3.6s forwards;
+}
+
+/* pink gradient glow line */
+.toast::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ffafbd, #ffc3a0, #ffafbd);
+    animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+    to {
+        background-position: 200% 0;
+    }
+}
+
+.toast.error {
+    border-color: rgba(255, 100, 120, 0.8);
+    color: #7a0c26;
+}
+
+/* === Romantic Toast+ (top-right, glass, heart, glitter) === */
+.toast-host {
+    position: fixed;
+    top: 20px;
+    right: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
+    z-index: 999999;
+    pointer-events: none;
+}
+
+/* Card */
+.toast {
+    pointer-events: auto;
+    position: relative;
+    overflow: hidden;
+    min-width: 240px;
+    max-width: min(90vw, 420px);
+    padding: 12px 16px 12px 46px;
+    /* leave room for the heart icon */
+    border-radius: 16px;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(255, 245, 247, 0.9));
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 170, 190, 0.65);
+    box-shadow: 0 14px 36px rgba(255, 120, 150, 0.25);
+    color: #6b2241;
+    font-weight: 600;
+    font-size: 15px;
+    animation: toastSlideIn .7s cubic-bezier(.17, .84, .44, 1) both,
+        toastFadeOut .7s ease-in 3.8s forwards;
+}
+
+/* Heart icon badge (animated) */
+.toast::before {
+    content: "â¤";
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    line-height: 1;
+    color: #ff4d6d;
+    filter: drop-shadow(0 2px 6px rgba(255, 100, 130, .35));
+    animation: heartBeat 1.8s ease-in-out infinite;
+}
+
+/* Glitter line on top */
+.toast::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #ffafbd, #ffc3a0, #ffafbd);
+    background-size: 200% 100%;
+    animation: shimmer 4s linear infinite;
+    opacity: .95;
+}
+
+/* Variants */
+.toast.error {
+    border-color: rgba(255, 100, 120, 0.85);
+    color: #7a0c26;
+}
+
+.toast .sub {
+    display: block;
+    font-weight: 500;
+    opacity: .8;
+    margin-top: 2px;
+    font-size: 13px;
+}
+
+/* Sparkle hearts that float away */
+.toast-spark {
+    position: absolute;
+    right: 10px;
+    bottom: 8px;
+    font-size: 12px;
+    color: #ff6b8a;
+    opacity: 0;
+    transform: translateY(0) scale(.9);
+    text-shadow: 0 0 6px rgba(255, 150, 170, .6);
+    animation: sparkRise 1.4s ease-out forwards;
+}
+
+/* Animations */
+@keyframes toastSlideIn {
+    from {
+        transform: translateX(120%) scale(.96);
+        opacity: 0
+    }
+}
+
+@keyframes toastFadeOut {
+    to {
+        transform: translateY(-10px);
+        opacity: 0
+    }
+}
+
+@keyframes shimmer {
+    to {
+        background-position: 200% 0
+    }
+}
+
+@keyframes heartBeat {
+
+    0%,
+    100% {
+        transform: translateY(-50%) scale(1);
+        filter: drop-shadow(0 2px 6px rgba(255, 100, 130, .35));
+    }
+
+    20% {
+        transform: translateY(-50%) scale(1.12);
+        filter: drop-shadow(0 4px 10px rgba(255, 120, 150, .45));
+    }
+
+    40% {
+        transform: translateY(-50%) scale(1);
+    }
+
+    60% {
+        transform: translateY(-50%) scale(1.12);
+    }
+}
+
+@keyframes sparkRise {
+    0% {
+        opacity: 0;
+        transform: translateY(10px) scale(.9) rotate(0deg);
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-26px) scale(1.1) rotate(14deg);
+    }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+
+    .toast,
+    .toast::before,
+    .toast::after,
+    .toast-spark {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important;
+    }
+}
+
+
+/* highlight animation when a new wish is inserted */
+.wish-card.added {
+    animation: cardIn .35s ease both, addFlash 1.8s ease-out;
+}
+
+@keyframes addFlash {
+    0% {
+        box-shadow: 0 0 0 0 rgba(255, 105, 135, .0)
+    }
+
+    20% {
+        box-shadow: 0 0 0 8px rgba(255, 105, 135, .18)
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(255, 105, 135, .0)
+    }
 }

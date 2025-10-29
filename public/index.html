@@ -95,17 +95,6 @@
   <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-4ZDD2059S0"></script>
   <script src="./scripts.js"></script>
 
-  <script>
-    window.dataLayer = window.dataLayer || [];
-
-    function gtag() {
-      dataLayer.push(arguments);
-    }
-    gtag('js', new Date());
-
-    gtag('config', 'G-4ZDD2059S0');
-  </script>
-
   <div class="cloud-door right-door"></div>
   <div class="cloud-door left-door"></div>
 </head>
@@ -124,6 +113,11 @@
     <img id="pause-icon" src="https://w.ladicdn.com/675faed0e377b9028f9ce15b/musical-note-20250423091909-s5ori.png"
       alt="Pause Icon" style="display: none;">
   </div>
+
+  <!-- Toasts + accessibility live region -->
+  <div class="toast-host" id="toastHost" aria-live="polite" aria-atomic="true"></div>
+  <div style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;" aria-live="polite"
+    id="srLive"></div>
 
   <!-- Romantic Petal Rain -->
   <div id="petal-field" aria-hidden="true"></div>
@@ -1581,7 +1575,7 @@
         </div>
         <!-- Wishes two-column layout -->
         <!-- KEEP your existing form block exactly as-is -->
-        <div id="FORM2" data-config-id="66d360f3b4577100128b7bb4" class="ladi-form">
+        <form id="FORM2" data-config-id="66d360f3b4577100128b7bb4" class="ladi-form">
           <form autocomplete="off" method="post" class="ladi-form">
             <div id="WISH_SUBMIT_BUTTON" class="ladi-element">
               <div class="ladi-button ladi-transition">
@@ -1674,7 +1668,7 @@
               </div>
             </div><button type="submit" class="ladi-hidden"></button>
           </form>
-        </div>
+        </form>
 
         <!-- New: fancy card list -->
         <aside class="wish-list-col" aria-label="Guest wishes">
@@ -2246,7 +2240,7 @@
             <div id="BOX19" class="ladi-element">
               <div class="ladi-box ladi-transition ladi-lazyload"></div>
             </div>
-            <div id="FORM7" data-config-id="68503c19beff9500124b8790" class="ladi-element">
+            <form id="FORM7" data-config-id="68503c19beff9500124b8790" class="ladi-element">
               <form autocomplete="off" method="post" class="ladi-form">
                 <div id="RSVP_SUBMIT_BUTTON" class="ladi-element">
                   <div class="ladi-button ladi-transition">
@@ -2310,7 +2304,7 @@
                   </div>
                 </div><button type="submit" class="ladi-hidden"></button>
               </form>
-            </div>
+            </form>
           </div>
         </div>
       </div>
@@ -2363,7 +2357,7 @@
         <div id="GROUP137" class="ladi-element">
           <div class="ladi-group">
             <div id="PARAGRAPH27" class="ladi-element">
-              <div class="ladi-paragraph ladi-transition">Hoàng Khánh x Phương Thảo</div>
+              <div class="ladi-paragraph ladi-transition">Hoàng Khánh ꨄ︎ Phương Thảo</div>
             </div>
             <div id="PARAGRAPH141" class="ladi-element">
               <div class="ladi-paragraph ladi-transition">Thank You</div>
@@ -2407,17 +2401,17 @@
             </div>
           </div>
         </div>
-        <div id="POPUP5" class="ladi-element">
+        <!-- <div id="POPUP5" class="ladi-element">
           <div class="ladi-popup">
             <div class="ladi-popup-background"></div>
             <div class="ladi-overlay ladi-lazyload"></div>
             <div id="PARAGRAPH46" class="ladi-element">
-              <div class="ladi-paragraph ladi-transition">Vợ chồng xin cảm ơn tình cảm của mọi người rất nhiều ạ ♥
+              <div class="ladi-paragraph ladi-transition">Vợ chồng xin cảm ơn tình cảm của mọi người rất nhiều ♥
                 ♥&nbsp;</div>
             </div>
           </div>
-        </div>
-        <div id="POPUP6" class="ladi-element">
+        </div> -->
+        <!-- <div id="POPUP6" class="ladi-element">
           <div class="ladi-popup">
             <div class="ladi-popup-background"></div>
             <div class="ladi-overlay ladi-lazyload"></div>
@@ -2426,7 +2420,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
         <div id="CHURE" class="ladi-element">
           <div class="ladi-popup">
             <div class="ladi-popup-background"></div>

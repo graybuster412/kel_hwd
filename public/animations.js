@@ -91,13 +91,13 @@
 (function () {
   const field = document.getElementById("petal-field");
   if (!field) return;
-  const PETALS = Math.min(24, Math.max(12, Math.floor(window.innerWidth / 80)));
+  const PETALS = Math.min(24, Math.max(12, Math.floor(window.innerWidth / 40)));
 
   function spawnPetal() {
     const p = document.createElement("span");
     p.className = "petal";
     const startX = Math.random() * 100;
-    const fall = 10 + Math.random() * 2; // seconds
+    const fall = 5 + Math.random() * 2; // seconds
     const sway = 3 + Math.random() * 3.5; // seconds
     const spin = 6 + Math.random() * 6; // seconds
     p.style.left = startX + "vw";
@@ -105,7 +105,7 @@
     p.style.animationDelay = `0s, ${Math.random() * 2}s, 0s`;
     p.style.opacity = 0.65 + Math.random() * 0.25;
     field.appendChild(p);
-    setTimeout(() => p.remove(), fall * 1000 * 2);
+    setTimeout(() => p.remove(), fall * 4000 * 6);
   }
 
   // Initial sprinkle

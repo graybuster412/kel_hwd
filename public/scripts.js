@@ -4,6 +4,15 @@ window.addEventListener("load", function () {
   }, 300);
 });
 
+window.dataLayer = window.dataLayer || [];
+
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
+
+gtag("config", "G-4ZDD2059S0");
+
 window.onload = function () {
   // on first load
   const audio = document.getElementById("background-music");
@@ -62,94 +71,3 @@ window.onload = function () {
     }
   });
 };
-
-(function () {
-  // 1) Provide data:
-  // Option A: sample data (remove if you use API)
-  // window.initialWishes = [
-  //   { name: "Minh Anh", message: "Chúc hai bạn trăm năm hạnh phúc!", createdAt: "2025-10-02T09:12:00+07:00" },
-  //   { name: "Huy & Linh", message: "Yêu thương bền lâu, đong đầy tiếng cười!", createdAt: "2025-10-03T21:05:00+07:00" },
-  // ];
-
-  // Option B: fetch from your endpoint (Airtable, etc.)
-  async function fetchWishes() {
-    try {
-      // Replace with your actual endpoint, e.g. /api/wishes (GET)
-      const res = await fetch(
-        "https://kelbe-graybuster412s-projects.vercel.app/api/" + "getWishes",
-        { method: "GET" }
-      );
-      if (!res.ok) throw new Error("Failed to fetch wishes");
-      const payload = await res.json();
-      // Normalize to {name, message, createdAt}
-      return (payload.records || payload).map((r) => ({
-        name: r.name || r.fields?.name || "Khách",
-        message: r.message || r.fields?.message || "",
-        createdAt:
-          r.createdAt || r.fields?.createdAt || new Date().toISOString(),
-      }));
-    } catch (e) {
-      console.warn("Wishes load error:", e);
-      return window.initialWishes || [];
-    }
-  }
-
-  function fmtTime(iso) {
-    try {
-      const d = new Date(iso);
-      // Friendly dd/mm HH:MM
-      return d.toLocaleString("vi-VN", { hour12: false });
-    } catch {
-      return "";
-    }
-  }
-
-  function renderWishes(list) {
-    const host = document.getElementById("wishList");
-    if (!host) return;
-    if (!list?.length) {
-      host.innerHTML = `
-          <article class="wish-card">
-            <div class="wish-card-head">
-              <span class="wish-name">—</span>
-              <time class="wish-time"></time>
-            </div>
-            <p class="wish-msg">Chưa có lời chúc nào. Hãy là người đầu tiên! 🥰</p>
-          </article>`;
-      return;
-    }
-    host.innerHTML = list
-      .slice() // copy
-      .sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt)) // newest first
-      .map(
-        (item) => `
-          <article class="wish-card">
-            <div class="wish-card-head">
-              <span class="wish-name">${(item.name || "Khách").replace(
-                /[<>&]/g,
-                ""
-              )}</span>
-              <time class="wish-time" datetime="${item.createdAt}">${fmtTime(
-          item.createdAt
-        )}</time>
-            </div>
-            <p class="wish-msg">${(item.message || "")
-              .replace(/</g, "&lt;")
-              .replace(/>/g, "&gt;")}</p>
-          </article>
-        `
-      )
-      .join("");
-  }
-
-  async function loadAndRender() {
-    const data = await fetchWishes();
-    renderWishes(data);
-  }
-
-  document
-    .getElementById("wishRefreshBtn")
-    ?.addEventListener("click", loadAndRender);
-  // Initial load
-  loadAndRender();
-})();
