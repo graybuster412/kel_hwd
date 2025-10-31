@@ -5792,7 +5792,7 @@ body.open .right-door {
 
     #GROUP128 {
         top: 22.85px;
-        left: -93px;
+        left: calc(100% / 5);
     }
 
     #GROUP127 {
@@ -6034,7 +6034,7 @@ body.open .right-door {
     }
 
     .wish-list-col {
-        top: 350.5px;
+        bottom: 50px;
         left: 198px;
         width: 593px;
     }
@@ -8011,7 +8011,7 @@ body.open .right-door {
     }
 
     #SECTION29 {
-        height: 1196.7px;
+        height: 510px;
     }
 
     #GROUP124 {
@@ -9616,8 +9616,8 @@ body.open .right-door {
 /* On larger screens, show 2 columns */
 @media (min-width: 900px) {
     .wish-list-col {
-        top: 580px;
         left: 200px;
+        bottom: 50px;
         width: 590px;
         max-height: 300px;
     }
@@ -9626,7 +9626,7 @@ body.open .right-door {
 /* On smaller screens */
 @media (max-width: 768px) {
     .wish-list-col {
-        top: 430px;
+        bottom: 50px;
         left: 20px;
         width: 380px;
         max-height: 240px;
@@ -9636,7 +9636,7 @@ body.open .right-door {
 /* On smaller screens */
 @media (max-width: 600px) {
     .wish-list-col {
-        top: 430px;
+        bottom: 10px;
         left: 20px;
         width: 380px;
         max-height: 220px;
