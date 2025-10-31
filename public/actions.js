@@ -1,6 +1,7 @@
-const BASE_URL = window.location.href.includes("kelxtamara-wedding")
-  ? "https://kelbe-graybuster412s-projects.vercel.app/api/"
-  : "https://kelbe-git-dev-graybuster412s-projects.vercel.app/api/";
+// const BASE_URL = window.location.href.includes("kelxtamara-wedding")
+//   ? "https://kelbe-graybuster412s-projects.vercel.app/api/"
+//   : "https://kelbe-git-dev-graybuster412s-projects.vercel.app/api/";
+const BASE_URL = "https://kelbe-graybuster412s-projects.vercel.app/api/";
 
 var wishes = window?.initialWishes ?? [];
 
@@ -61,6 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
       return await res.json();
     } catch (err) {
       console.error("❌ Gửi thất bại:", err);
+      throw new Error(err);
     }
   }
 
@@ -133,7 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
     .getElementById("RSVP_SUBMIT_BUTTON")
     ?.addEventListener("click", async (e) => {
       try {
-        const form = document.querySelector("#FORM7 form, #FORM7");
+        const form = document.querySelector("#FORM15 form, #FORM15");
         const name =
           document.querySelector("#RSVP_NAME_INPUT input")?.value.trim() || "";
         const isAttending = document.querySelector(
@@ -148,9 +150,6 @@ document.addEventListener("DOMContentLoaded", function () {
           document
             .querySelector("#RSVP_MESSAGE_TEXTAREA textarea")
             ?.value.trim() || "";
-        const attendingStatus = (statusMsg) => {
-          return statusMsg === "Xin lỗi, tôi bận mất rồi" ? "no" : "yes";
-        };
 
         if (!name) return showToast("Vui lòng nhập tên.", "error");
         if (!isAttending)
@@ -163,7 +162,7 @@ document.addEventListener("DOMContentLoaded", function () {
         const data = {
           fullname: name,
           email: name,
-          status: attendingStatus(isAttending),
+          status: isAttending,
           guests: guestCount,
           place: party,
           message,

@@ -9084,7 +9084,7 @@ body.open .right-door {
     #IMAGE77,
     #IMAGE77>.ladi-image>.ladi-image-background {
         width: 194.035px;
-        height: 237.496px;
+        height: 244.496px;
     }
 
     #GROUP132,
@@ -9107,10 +9107,10 @@ body.open .right-door {
 
     #IMAGE76,
     #IMAGE78 {
-        width: 95.8388px;
-        height: 101.299px;
-        top: 72.6203px;
-        left: 49.0981px;
+        width: 97.8388px;
+        height: 105.299px;
+        top: 80.6203px;
+        left: 48.0981px;
     }
 
     #IMAGE76>.ladi-image>.ladi-image-background,
@@ -9751,7 +9751,7 @@ body.open .right-door {
 }
 
 /* === Romantic Toast (top-right) === */
-.toast-host {
+/* .toast-host {
     position: fixed;
     top: 20px;
     right: 24px;
@@ -9761,10 +9761,10 @@ body.open .right-door {
     gap: 10px;
     z-index: 999999;
     pointer-events: none;
-}
+} */
 
 /* base card */
-.toast {
+/* .toast {
     pointer-events: auto;
     background: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(8px);
@@ -9780,19 +9780,7 @@ body.open .right-door {
     overflow: hidden;
     animation: toastSlideIn 0.6s cubic-bezier(0.17, 0.84, 0.44, 1) both,
         toastFadeOut 0.6s ease-in 3.6s forwards;
-}
-
-/* pink gradient glow line */
-.toast::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #ffafbd, #ffc3a0, #ffafbd);
-    animation: shimmer 4s linear infinite;
-}
+} */
 
 @keyframes shimmer {
     to {
@@ -9841,7 +9829,7 @@ body.open .right-door {
 
 /* Heart icon badge (animated) */
 .toast::before {
-    content: "â¤";
+    content: "❤";
     position: absolute;
     left: 12px;
     top: 50%;
@@ -9965,7 +9953,6 @@ body.open .right-door {
         transition-duration: .001ms !important;
     }
 }
-
 
 /* highlight animation when a new wish is inserted */
 .wish-card.added {
