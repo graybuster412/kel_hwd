@@ -7577,7 +7577,7 @@ body.open .right-door {
     }
 
     #IMAGE78 {
-        width: 191.496px;
+        width: 180.496px;
         height: 187.629px;
         top: 136.257px;
         left: 94.021px;
@@ -9927,7 +9927,14 @@ body.open .right-door {
         height: 205.777px;
         top: -59.778px;
         left: -31.906px;
+    }
+
+    #IMAGE76>.ladi-image>.ladi-image-background {
         background-image: url("https://graybuster412.github.io/kel_pics/qr_cua_tui.png");
+    }
+
+    #IMAGE78>.ladi-image>.ladi-image-background {
+        background-image: url("https://graybuster412.github.io/kel_pics/qr_cua_dau.png");
     }
 
     /* my QR */
