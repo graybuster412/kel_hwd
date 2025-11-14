@@ -8819,7 +8819,7 @@ body.open .right-door {
     }
 
     #SECTION29 {
-        height: 510px;
+        height: 600px;
     }
 
     #GROUP124 {
@@ -9236,8 +9236,8 @@ body.open .right-door {
     #GROUP139 {
         width: 335px;
         height: 30px;
-        top: 1140.21px;
         left: 43.5001px;
+        bottom: 50px;
     }
 
     #BUTTON64 {
